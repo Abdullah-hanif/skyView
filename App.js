@@ -1,20 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {  SafeAreaView,StyleSheet, Text, View } from 'react-native';
+import Navigation from './src/config/navigation'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styels.droidSafeArea}>
+   <Navigation/> 
+      </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const styels = StyleSheet.create({
+  droidSafeArea: {
+      flex: 1,
+      // paddingTop: Platform.OS === 'android' ? 25 : 0
   },
 });
+
+
